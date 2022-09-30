@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ates e Depois</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: bold;
+        }
+
+        input {
+            padding: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <input type="button" value="Atecessor e Sucessor" onclick="verificar()">
+    <script>
+        function verificar() {
+            let num = Number(prompt('Digite um número qualquer!'))
+            let soma = Number(num + 1)
+            let sub = Number(num - 1)
+            
+            alert(`Antes de ${num}, temos o número ${sub}. 
+Depois de ${num}, temos o número ${soma}.`)
+        }
+    </script>
+</body>
+</html>

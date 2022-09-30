@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            padding: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <input type="button" value="Coverter" onclick="converter()">
+    <p>Clique no botão acima para inciar.</p>
+    <div id="res"></div>
+    <div id="conv"></div>
+
+    <script>
+        const res = document.querySelector('#res')
+        const conv = document.querySelector('#conv')
+        
+        function converter(){
+            const tempCelsius = prompt('Digite uma temperatura em °C (Celsius)')
+            const kelvin = Number(tempCelsius) + Number(273)
+            const fahrenheit = Number(tempCelsius*9/5 +32).toFixed(2)
+            
+            res.innerHTML = `<h2>A temperatura de ${tempCelsius}°C, corresponde a...</h2>`
+            conv.innerHTML = `<p>${kelvin}°K (Kelvin)
+                              <p>${fahrenheit}°F (Fahrenheit)
+                              </p>`  
+
+        }
+    </script>
+</body>
+</html>

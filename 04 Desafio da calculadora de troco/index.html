@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de troco</title>
+    <style>
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <input type="button" value="Comprar produto" onclick="verificar()">
+
+    <script>
+        function verificar() {
+            let produto = prompt('Qual produto você está comprando?')
+            let valor = Number(prompt(`Quanto custa o ${produto} que você está comprando?`)).toFixed(2)
+            let total = Number(prompt(`Qual foi o valor que você deu para pagar o ${produto}?`)).toFixed(2)
+            let cal = Number(total - valor)
+            
+            
+            alert(`Você comprou ${produto} que custou R$ ${valor}.
+Deu R$ ${total} em dinheiro e vai receber R$ ${cal} de troco. 
+Volte sempre!!!`)
+        }
+    </script>
+</body>
+</html>
