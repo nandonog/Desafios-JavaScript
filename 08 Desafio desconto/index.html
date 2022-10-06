@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ ==> US$</h1>
+    <button id="btn" onclick="converter()">
+        <p>Converter</p>
+    </button>
+    <div id="res"></div>
+    <div id="conv"></div>
+
+    <script>
+        const contA = prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+        const res = document.querySelector('#res')
+        const conv = document.querySelector('#conv')
+        
+        function converter() {
+            const carteira = prompt('Quanto R$ você tem na carteira?')
+            const divi = Number(carteira / contA).toFixed(2)
+            
+            res.innerHTML = `<h2>Você tem na sua carteira o valor de R$ ${carteira},00</h2>`
+            conv.innerHTML = `<p>Com esse valor você consegue comprar US$ ${divi} dolares</p>`
+
+        }
+    </script>
+</body>
+</html>
