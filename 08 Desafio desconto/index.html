@@ -8,30 +8,34 @@
     <style>
         body {
             font-family: sans-serif;
+            
+        }
+        button {
+            padding: 5px;
         }
         
     </style>
 </head>
 <body>
-    <h1>Conversor R$ ==> US$</h1>
+    <h1>Calculo Desconto</h1>
     <button id="btn" onclick="converter()">
-        <p>Converter</p>
+        <p>Desconto de 10%</p>
     </button>
+    <p>Clique no botão acima para iniciar</p>
     <div id="res"></div>
     <div id="conv"></div>
 
     <script>
-        const contA = prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
         const res = document.querySelector('#res')
         const conv = document.querySelector('#conv')
-        
-        function converter() {
-            const carteira = prompt('Quanto R$ você tem na carteira?')
-            const divi = Number(carteira / contA).toFixed(2)
-            
-            res.innerHTML = `<h2>Você tem na sua carteira o valor de R$ ${carteira},00</h2>`
-            conv.innerHTML = `<p>Com esse valor você consegue comprar US$ ${divi} dolares</p>`
 
+        function converter() {
+            const produto = prompt('Qaul é o produto que você está comprando?')
+            const preço = prompt(`Qaul o preço do ${produto}?`)
+
+            res.innerHTML = `<h2>Calculando o desconto de 10% para ${produto}</h2>`
+            conv.innerHTML = `<p>O preço original era R$ ${preço}.
+                              <p>Você acaba de ganhar ${}</p>`
         }
     </script>
 </body>
